@@ -38,3 +38,6 @@ jobs:
 
       - name: Code Quality
         run: poetry run black . --check
+
+      - name: Test with pytest
+        run: poetry run pytest
