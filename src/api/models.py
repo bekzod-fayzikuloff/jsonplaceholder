@@ -37,6 +37,7 @@ class Comment(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField()
     body = models.CharField(max_length=2000)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Comment"
