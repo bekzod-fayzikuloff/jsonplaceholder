@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "drf_yasg",
     "rest_framework",
     "api",
 ]
@@ -196,3 +197,13 @@ JAZZMIN_SETTINGS = {
         "auth.group": "vertical_tabs",
     },
 }
+############
+# OPEN_API #
+############
+DOCS_API_TITLE = os.environ.get("API_TITLE")
+DOCS_API_VERSION = os.environ.get("API_VERSION")
+DOCS_API_DESCRIPTION = os.environ.get("API_DESCRIPTION")
+DOCS_TERM_OF_SERVICE = os.environ.get("TERM_OF_SERVICE")
+DOCS_CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL")
+DOCS_API_LICENSE = os.environ.get("API_LICENSE")
+DOCS_IS_PUBLIC = os.environ.get("API_PUBLIC")
