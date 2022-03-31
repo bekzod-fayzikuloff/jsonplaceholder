@@ -3,7 +3,8 @@ version: "3.5"
 services:
   app:
     restart: always
-    command: bash -c "poetry run python src/manage.py migrate && poetry run python src/manage.py runserver 0.0.0.0:8000"
+    # command: bash -c "poetry run python src/manage.py migrate && poetry run python src/manage.py runserver 0.0.0.0:8000"
+    command: bash -c "gunicorn src.placeholder.wsgi:application --bind 0.0.0.0:$PORT"
     build: .
     volumes:
       - .:/usr/src/app
